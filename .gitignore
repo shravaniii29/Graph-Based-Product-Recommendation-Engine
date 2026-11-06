@@ -1,0 +1,61 @@
+# ============================================================
+# SDS_MiniProj - Graph-Based Product Recommendation Engine
+# ============================================================
+
+# ---- Python virtual environments ----
+.venv/
+venv/
+env/
+ENV/
+
+# ---- Python bytecode / build artefacts ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+
+# ---- Test & tool caches ----
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---- Secrets (none exist today; ignored as a safeguard) ----
+.env
+.env.*
+.streamlit/secrets.toml
+kaggle.json
+*.pem
+*.key
+
+# ---- Raw Retailrocket dataset (CC BY-NC-SA 4.0): do not redistribute raw files ----
+events.csv
+item_properties_part*.csv
+category_tree.csv
+archive*.zip
+outputs*.zip
+data/raw/
+
+# ---- IDE / editor ----
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Temporary / local-only files ----
+*.tmp
+*.log
+# loose chart downloads from the dashboard (Plotly "download as png")
+plot-image*.png
+newplot*.png
+# duplicate copy of notebooks/Graph_Recommendation_Phase1.ipynb created by the Claude app
+Claude outputs/

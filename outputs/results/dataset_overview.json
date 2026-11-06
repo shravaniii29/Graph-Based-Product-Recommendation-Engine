@@ -1,0 +1,36 @@
+{
+  "raw": {
+    "total_interactions": 2756101,
+    "unique_users": 1407580,
+    "unique_products": 235061,
+    "first_event": "2015-05-03 03:00:04.384000",
+    "last_event": "2015-09-18 02:59:47.788000",
+    "days_covered": 137,
+    "timestamp_unit": "ms"
+  },
+  "cleaning": {
+    "raw_rows": 2756101,
+    "removed_unknown_or_missing": 0,
+    "removed_duplicates": 460,
+    "clean_rows": 2755641
+  },
+  "event_distribution": {
+    "view": 2664312,
+    "addtocart": 69332,
+    "transaction": 22457
+  },
+  "clean_train_summary": {
+    "train_users": 16053,
+    "train_products": 12015,
+    "train_interactions": 152818,
+    "matrix_sparsity_pct": 99.9208,
+    "avg_products_per_user": 9.52,
+    "avg_users_per_product": 12.72,
+    "test_users_total": 308551,
+    "test_users_known_in_train": 1425,
+    "test_users_with_new_relevant_items": 861,
+    "avg_relevant_items_per_user": 5.502903600464576
+  },
+  "cutoff_datetime": "2015-08-18 04:23:20.445000",
+  "demo_user": 123595
+}

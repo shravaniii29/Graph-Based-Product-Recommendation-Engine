@@ -1,0 +1,8 @@
+- Best precision@5 among personalised methods: **Personalized PageRank** (0.0233).
+- Best recall@5 among personalised methods: **Personalized PageRank** (0.0489).
+- Best ndcg@5 among personalised methods: **Personalized PageRank** (0.0462).
+- Common Neighbors NDCG@5 vs Item-Item CF: +137.3% (confidence intervals overlap, so the difference may not be significant).
+- Personalized PageRank NDCG@5 vs Item-Item CF: +252.7% (confidence intervals do not overlap, so the difference is likely real).
+- Methods beating the popularity reference on NDCG@5: Item-Item CF, Common Neighbors, Personalized PageRank.
+- Fastest: **Item-Item CF** (0.35 ms/user); slowest: **Personalized PageRank** (503.62 ms/user), 1425x slower.
+- Hit rate@5: Item-Item CF 3.0%, Common Neighbors 8.7%, Personalized PageRank 10.0% of evaluated users got at least one correct recommendation.

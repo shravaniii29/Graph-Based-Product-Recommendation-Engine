@@ -1,0 +1,21 @@
+{
+  "user_nodes": 16053,
+  "product_nodes": 12015,
+  "total_nodes": 28068,
+  "edges": 152818,
+  "bipartite_density": 0.0007923088933533969,
+  "networkx_density": 0.00038796901725501713,
+  "avg_user_degree": 9.519591353641063,
+  "median_user_degree": 7.0,
+  "max_user_degree": 327,
+  "avg_product_degree": 12.718934665002081,
+  "median_product_degree": 9.0,
+  "max_product_degree": 276,
+  "connected_components": 2,
+  "largest_component_nodes": 27976,
+  "largest_component_pct": 99.6722245974063,
+  "avg_edge_weight": 1.8267219830124724,
+  "is_bipartite": true,
+  "build_time_s": 0.594300258999283,
+  "build_memory_mb": 65.81452799999988
+}
