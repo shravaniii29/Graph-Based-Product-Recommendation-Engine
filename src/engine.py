@@ -193,7 +193,7 @@ def compare_with_saved(live, saved, rtol=1e-5):
     equally correct) or "different".
 
     Why ties happen: CF selects the top-k with numpy's argpartition, whose choice
-    between equal values can differ between numpy versions (Colab vs. your laptop).
+    between equal values can differ between NumPy versions and runtime environments.
     """
     li, si = [int(x) for x in live["itemid"]], [int(x) for x in saved["itemid"]]
     if li == si:

@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 
-from theme import (ACCENT, BORDER, EVENT_COLORS, GRID, METHOD_COLORS, MUTED, NODE_COLORS,
+from theme import (ACCENT, BG_SOFT, BORDER, EVENT_COLORS, GRID, METHOD_COLORS, MUTED, NODE_COLORS,
                    SHORT_NAMES, TEXT)
 
 FONT = "Inter, 'Segoe UI', system-ui, sans-serif"
@@ -14,6 +14,7 @@ FONT = "Inter, 'Segoe UI', system-ui, sans-serif"
 
 def style(fig, height=380, title=None, legend=True):
     fig.update_layout(
+        template="plotly_dark",
         height=height,
         title=dict(text=title, font=dict(size=15, color=TEXT), x=0.01, xanchor="left") if title else None,
         font=dict(family=FONT, size=13, color=TEXT),
@@ -21,7 +22,7 @@ def style(fig, height=380, title=None, legend=True):
         margin=dict(l=10, r=10, t=50 if title else 20, b=10),
         showlegend=legend,
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1, bgcolor="rgba(0,0,0,0)"),
-        hoverlabel=dict(bgcolor="white", bordercolor=BORDER, font=dict(family=FONT, color=TEXT)),
+        hoverlabel=dict(bgcolor=BG_SOFT, bordercolor=BORDER, font=dict(family=FONT, color=TEXT)),
     )
     fig.update_xaxes(gridcolor=GRID, zerolinecolor=GRID, linecolor=BORDER)
     fig.update_yaxes(gridcolor=GRID, zerolinecolor=GRID, linecolor=BORDER)
@@ -51,7 +52,7 @@ def data_funnel(stages):
     """stages: list of (label, value)."""
     fig = go.Figure(go.Funnel(
         y=[s[0] for s in stages], x=[s[1] for s in stages], textinfo="value",
-        marker=dict(color=["#D9D1FA", "#C6DDF4", "#F9D3C3", "#C7EAD6", "#F6E3A8"][:len(stages)]),
+        marker=dict(color=["#554477", "#285274", "#77452F", "#286043", "#6D5929"][:len(stages)]),
         connector=dict(line=dict(color=BORDER))))
     return style(fig, 340, legend=False)
 
@@ -169,7 +170,7 @@ def overlap_heatmap(mat):
     z = mat.values.astype(float)
     fig = go.Figure(go.Heatmap(
         z=z, x=labels, y=labels, zmin=0, zmax=1,
-        colorscale=[[0, "#FFFFFF"], [0.5, "#D9D1FA"], [1, "#8B7FD9"]],
+        colorscale=[[0, "#171C26"], [0.5, "#494064"], [1, "#8B7FD9"]],
         text=[[f"{v:.2f}" if not math.isnan(v) else "" for v in row] for row in z],
         texttemplate="%{text}", hovertemplate="%{y} vs %{x}: %{z:.3f}<extra></extra>", showscale=False))
     fig.update_yaxes(autorange="reversed")

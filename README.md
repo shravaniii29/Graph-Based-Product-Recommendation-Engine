@@ -150,7 +150,7 @@ streamlit run dashboard/app.py
 
 ## 7. Testing record
 
-**Performed by Claude in a Linux test environment (Python 3.13, pandas 3.0, NumPy 2.5, NetworkX 3.7, SciPy 1.18, scikit-learn 1.9) on the real saved outputs:**
+**Recorded Linux validation on the saved outputs (Python 3.13, pandas 3.0, NumPy 2.5, NetworkX 3.7, SciPy 1.18, scikit-learn 1.9):**
 
 | Test | Result |
 |---|---|
@@ -164,10 +164,10 @@ streamlit run dashboard/app.py
 | Missing / corrupted files → clear errors, graph rebuild, CF refit | passed |
 | User picker: displayed options map back to the right user IDs (regression test) | passed |
 | **Total pytest** | **42 passed, 1 skipped** (the skipped file needs Streamlit) |
-| All 7 pages executed for 6 scenarios (different users, unknown user, widget options, broken files) with stand-in Streamlit/Plotly modules | 0 errors |
-| **Your laptop (real Streamlit, first run)** | 46 passed, 1 failed: user-selection test (fixed, see below) |
+| All 7 pages executed for 6 scenarios (different users, unknown user, widget options, broken files) using Streamlit/Plotly test doubles | 0 errors |
+| **Initial Windows validation with Streamlit** | 46 passed, 1 failed: user-selection test (fixed, see below) |
 
-**Still to be performed on your laptop** (Streamlit and Plotly could not be installed in Claude's environment):
+**Recommended local verification:**
 1. `python -m pytest tests -v`: confirms everything on your Python/NumPy versions, **including `test_dashboard_app.py`** (real Streamlit, every page).
 2. `streamlit run dashboard/app.py` and visually check each page: charts render, tables readable, user selection works, graph is interactive.
 

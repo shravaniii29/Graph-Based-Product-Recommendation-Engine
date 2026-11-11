@@ -1,6 +1,6 @@
 """Dashboard tests with Streamlit's built-in AppTest (runs the real app headlessly).
 
-Requires `streamlit` to be installed, so run them on your laptop:
+Requires `streamlit` to be installed. Run from the project root:
     python -m pytest tests/test_dashboard_app.py -v
 """
 import os

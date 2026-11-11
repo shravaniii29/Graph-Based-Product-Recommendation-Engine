@@ -57,5 +57,3 @@ desktop.ini
 # loose chart downloads from the dashboard (Plotly "download as png")
 plot-image*.png
 newplot*.png
-# duplicate copy of notebooks/Graph_Recommendation_Phase1.ipynb created by the Claude app
-Claude outputs/

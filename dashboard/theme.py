@@ -1,15 +1,15 @@
-"""Visual identity of the dashboard: pastel palette, CSS and small HTML components."""
+"""Visual identity of the dashboard: dark palette, CSS and small HTML components."""
 import html
 
 # ---------------------------------------------------------------
 # Palette (one colour per method, used on every page and chart)
 # ---------------------------------------------------------------
-TEXT = "#2F3142"
-MUTED = "#6B6F85"
-ACCENT = "#8B7FD9"          # lavender: headings, highlights
-BORDER = "#ECE8F6"
-GRID = "#EEEBF5"
-BG_SOFT = "#F6F4FC"
+TEXT = "#E6EAF2"
+MUTED = "#A6B0C3"
+ACCENT = "#B3A1FF"
+BORDER = "#30394B"
+GRID = "#252D3C"
+BG_SOFT = "#171C26"
 
 METHOD_COLORS = {
     "Item-Item CF": "#7FB3E0",            # sky blue
@@ -18,10 +18,10 @@ METHOD_COLORS = {
     "Popularity (reference)": "#BDB3DA",  # lavender grey
 }
 METHOD_SOFT = {
-    "Item-Item CF": "#E6F1FB",
-    "Common Neighbors": "#FDEDE6",
-    "Personalized PageRank": "#E3F5EB",
-    "Popularity (reference)": "#F0EDF8",
+    "Item-Item CF": "#192C40",
+    "Common Neighbors": "#382820",
+    "Personalized PageRank": "#193529",
+    "Popularity (reference)": "#2B2540",
 }
 SHORT_NAMES = {
     "Item-Item CF": "Item-Item CF",
@@ -40,7 +40,7 @@ h1, h2, h3 {{ color: {TEXT}; letter-spacing: -0.01em; }}
 section[data-testid="stSidebar"] {{ border-right: 1px solid {BORDER}; }}
 
 .hero {{
-  background: linear-gradient(120deg, #EEE9FD 0%, #E5F1FB 50%, #E6F6EE 100%);
+  background: linear-gradient(120deg, #29213F 0%, #192C40 50%, #193529 100%);
   border: 1px solid {BORDER}; border-radius: 20px; padding: 26px 30px; margin-bottom: 18px;
 }}
 .hero h1 {{ font-size: 1.9rem; margin: 0 0 6px 0; padding: 0; }}
@@ -51,8 +51,8 @@ section[data-testid="stSidebar"] {{ border-right: 1px solid {BORDER}; }}
 .section {{ font-size: 1.12rem; font-weight: 650; color: {TEXT}; margin: 22px 0 8px 0;
             padding-left: 10px; border-left: 4px solid {ACCENT}; }}
 
-.kpi {{ background: #FFFFFF; border: 1px solid {BORDER}; border-radius: 16px; padding: 14px 16px;
-        box-shadow: 0 1px 3px rgba(70, 60, 140, 0.06); height: 100%; border-top: 4px solid var(--accent); }}
+.kpi {{ background: {BG_SOFT}; border: 1px solid {BORDER}; border-radius: 16px; padding: 14px 16px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); height: 100%; border-top: 4px solid var(--accent); }}
 .kpi .label {{ font-size: 0.74rem; color: {MUTED}; text-transform: uppercase; letter-spacing: 0.05em; }}
 .kpi .value {{ font-size: 1.55rem; font-weight: 700; color: {TEXT}; line-height: 1.25; margin-top: 2px; }}
 .kpi .sub {{ font-size: 0.8rem; color: {MUTED}; margin-top: 2px; }}
@@ -67,13 +67,13 @@ section[data-testid="stSidebar"] {{ border-right: 1px solid {BORDER}; }}
 .rec-card .meta {{ font-size: 0.78rem; color: {MUTED}; margin-bottom: 8px; }}
 .rec-card ol {{ margin: 0; padding-left: 1.2rem; }}
 .rec-card li {{ font-size: 0.92rem; color: {TEXT}; margin: 2px 0; font-variant-numeric: tabular-nums; }}
-.hit {{ color: #2E8B57; font-weight: 700; }}
+.hit {{ color: #8FD3B0; font-weight: 700; }}
 
 .steps {{ display: flex; gap: 10px; flex-wrap: wrap; margin: 4px 0 8px 0; }}
-.step {{ flex: 1 1 150px; background: #FFFFFF; border: 1px solid {BORDER}; border-radius: 14px; padding: 10px 12px; }}
+.step {{ flex: 1 1 150px; background: {BG_SOFT}; border: 1px solid {BORDER}; border-radius: 14px; padding: 10px 12px; }}
 .step b {{ display: block; color: {TEXT}; font-size: 0.9rem; }}
 .step span {{ color: {MUTED}; font-size: 0.8rem; }}
-.step .n {{ display: inline-block; width: 22px; height: 22px; border-radius: 50%; background: #EEE9FD;
+.step .n {{ display: inline-block; width: 22px; height: 22px; border-radius: 50%; background: #302747;
             color: {ACCENT}; text-align: center; font-weight: 700; font-size: 0.8rem; line-height: 22px;
             margin-bottom: 4px; }}
 </style>
